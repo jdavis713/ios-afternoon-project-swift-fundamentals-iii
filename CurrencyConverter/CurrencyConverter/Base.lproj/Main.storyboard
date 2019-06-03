@@ -58,6 +58,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-aq-Lhl">
                                         <rect key="frame" x="0.0" y="76" width="382" height="30"/>
                                         <state key="normal" title="Convert"/>
+                                        <connections>
+                                            <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJH-rZ-hkb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -70,10 +73,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ab-Fb-3WM">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                         <state key="normal" title="CAD"/>
+                                        <connections>
+                                            <action selector="cadConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwA-I0-6I0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypj-wG-uaO">
                                         <rect key="frame" x="39" y="0.0" width="34" height="30"/>
                                         <state key="normal" title="Peso"/>
+                                        <connections>
+                                            <action selector="pesoConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gqi-Ql-j9z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -88,6 +97,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cadButton" destination="5ab-Fb-3WM" id="Wh0-Uj-hhi"/>
+                        <outlet property="fromCurrencyTextField" destination="K8u-S1-Duz" id="twi-rN-fbu"/>
+                        <outlet property="pesoButton" destination="Ypj-wG-uaO" id="h1k-r9-LNo"/>
+                        <outlet property="toCurrencyLabel" destination="BuS-RV-g8s" id="iWy-5i-RCT"/>
+                        <outlet property="toCurrencyTextField" destination="VOr-Y8-Qp7" id="PbX-Hq-2MA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
