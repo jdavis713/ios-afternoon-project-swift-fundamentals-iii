@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     enum CurrencyType: Double {
@@ -38,17 +38,19 @@ class ViewController: UIViewController {
         return 0.0
     }
         
-        
-            
     
-    
-
-
     //MARK: - Actions
     
     @IBAction func convert(_ sender: Any) {
-        
-    
+        if cadButton.isSelected == true,
+           let dollarString = fromCurrencyTextField.text,
+            let dollars = Double(dollarString) {
+            let canConversion = convert(dollars: dollars, to: .cad)
+        } else if pesoButton.isSelected == true,
+            let dollarString = fromCurrencyTextField.text,
+            let dollars = Double(dollarString) {
+            let pesoConversion = convert(dollars: dollars, to: .peso)
+        }
     }
     
     @IBAction func cadConvert(_ sender: Any) {
